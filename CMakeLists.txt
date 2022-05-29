@@ -59,3 +59,17 @@ CPMAddPackage(
         GIT_TAG 2022.3.24
 )
 
+CPMAddPackage(
+  NAME metaf
+  GIT_REPOSITORY https://gitlab.com/sthagen/metaf.git
+  VERSION 5.7.1
+  # 5.7.1 is not released yet by Nick Naumenko (upstream), so use the latest approved commit
+  GIT_TAG 938d57e2acb84431bea1743739327d55492a61f6
+)
+
+if(metaf_ADDED)
+  add_library(metaf INTERFACE)
+  target_include_directories(metaf INTERFACE ${metaf_SOURCE_DIR}/include/)
+  message("Added ${metaf_SOURCE_DIR}/include/ as include")
+endif()
+
