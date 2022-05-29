@@ -4,5 +4,6 @@ Roundtrip transformations on encoded weather data - mostly METAR.
 
 ## Status
 
-Experimental
+Experimental.
 
+**Note**: The default branch is default.
